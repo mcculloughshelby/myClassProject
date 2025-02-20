@@ -1,0 +1,25 @@
+{
+    "categories": [
+      {
+        "id": 1,
+        "category": "Fiction"
+      },
+      {
+        "id": 2,
+        "category": "Non-Fiction"
+      },
+      {
+        "id": 3,
+        "category": "Science Fiction"
+      },
+      {
+        "id": 4,
+        "category": "Biography"
+      },
+      {
+        "id": 5,
+        "category": "Mystery"
+      }
+    ]
+  }
+  
