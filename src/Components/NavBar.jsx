@@ -3,20 +3,31 @@ import {dataContext} from "../App";
 export default function NavBar(){
 const [uname,setUname]=useState("");
 const [pwd, setPwd]=useState("");
-const {logStatus, setLogStatus}=useContext(dataContext);
+const {login, setlogin}=useContext(sessionStorage.getItem("logged")!=null?sessionStorage.getItem("logged"):0);
+//const {logStatus, setLogStatus}=useContext(dataContext);
+var logSt=0;
+if (sessionStorage.getItem("logged")!=null){
+  logSt=sessionStorage.getItem("logged");
+  setlogin(1);
+  alert(sessionStorage.getItem("logged"));
+}
 
 function check(){
 if(uname.trim()==="user1"  && pwd.trim() === "test")
-  setLogin(1); //shared method for log status
-
+  //setLogin(1); //shared method for log status
+  sessionStorage.setItem("logged",1);
 }
 
 function logout(){
-  setLogin(0); //shared method for log status
+ // setLogin(0); //shared method for log status
+ sessionStorage.setItem("logged",0);
+ alert (sessionStorage.getItem("logged"));
+
+ 
 }
 
 
-var login=<div>
+var loginForm=<div>
   Please enter UserName
    <input className="border-2 border-cyan-600" type="text" id="uname" value={uname} onChange={(e)=>{setUname(e.target.value)}}/>
    <br></br>Please enter Password
@@ -39,8 +50,7 @@ You are logged Out
        <div><a href="/contactus">Contact Us</a></div>
        <div> </div>
        <div> </div>
-       <div>{logStatus==0?login:logoutUser}</div>
-
+       <div>{logSt==0?loginForm:logoutUser}</div>
     </div>
   );
 

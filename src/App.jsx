@@ -9,8 +9,15 @@ import {books} from "./Model/Books.JSON";
 export const dataContext = createContext();
 
 export default function App() {
+
+  var login=0;
+  if(sessionStorage.getItem("logged")!=1){
+    login=sessionStorage.getItem("logged");
+    
   const [logStatus, setLogStatus]=useState(0);
   const [booklist, setBooklist]=useState(books);
+
+  }
   return (
     <div>
       <dataContext.Provider value={{logStatus, setLogStatus, booklist, setBooklist}}>
