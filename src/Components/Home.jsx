@@ -8,10 +8,10 @@ export default function Home(){
     return(
       
                 <div>
-                <h1>Welcome {name} </h1>
-                Please enter your name: 
-                <input className="border-cyan-200 border-2"  type="text" id="uname" value={name} onChange={(e)=>{setName(e.target.value);}}></input>
-               <h2> You are {name}</h2>
+                <h1>Welcome  </h1>
+                Please enter your name
+              
+        
                 </div>
     )
             

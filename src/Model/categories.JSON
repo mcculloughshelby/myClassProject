@@ -10,15 +10,15 @@
       },
       {
         "id": 3,
-        "category": "Science Fiction"
+        "category": "Science"
       },
       {
         "id": 4,
-        "category": "Biography"
+        "category": "History"
       },
       {
         "id": 5,
-        "category": "Mystery"
+        "category": "Technology"
       }
     ]
   }
